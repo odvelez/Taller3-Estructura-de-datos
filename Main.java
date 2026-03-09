@@ -1,4 +1,3 @@
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
@@ -33,6 +32,17 @@ public class Main {
 
                 else if (opcion == 2) {
 
+                    System.out.println("Ingrese el Id: ");
+                    int id = sc.nextInt();
+                    System.out.println("Ingrese el nombre: ");
+                    String nombre = sc.nextLine();
+                    System.out.println("Ingrese el email: ");
+                    String email = sc.nextLine();
+                    
+                    Cliente cliente = new Cliente (id,nombre,email);
+
+                    CRUDArchivos.AgregarCliente(cliente);
+
                 }
 
                 else if (opcion == 3) {
@@ -40,7 +50,7 @@ public class Main {
                 }
 
                 else if (opcion == 4) {
-
+                    CRUDArchivos.VerClientesCompras();
                 }
 
                 else {
