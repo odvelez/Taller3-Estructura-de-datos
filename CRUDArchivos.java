@@ -4,15 +4,38 @@ import java.util.*;
 public class CRUDArchivos {
 
     public static void OrdenarPrecio() throws IOException {
+        List<Producto> productos = leerProductos();
 
+        int n = productos.size();
+
+        for (int i = 0; i < n - 1; i++) {
+
+            for (int j = 0; j < n - 1 - i; j++) {
+
+                if (productos.get(j).getPrecio() > productos.get(j + 1).getPrecio()) {
+
+                    Producto temp = productos.get(j);
+
+                    productos.set(j, productos.get(j + 1));
+
+                    productos.set(j + 1, temp);
+
+                }
+            }
+        }
+
+        System.out.println("Productos ordenados por precio:");
+
+        for (Producto p : productos) {
+
+            System.out.println(
+                    p.getNombre() + " - $" + p.getPrecio() + " - Stock: " + p.getStock());
+
+        }
     }
 
-    public static void AgregarCliente(Cliente cliente) throws IOException {
-        FileWriter fw = new FileWriter("clientes.csv", true);
-        BufferedWriter bw = new BufferedWriter(fw);
-        bw.write(cliente.toString());
-        bw.newLine();
-        bw.close();
+    public static void AgregarCliente() throws IOException {
+
     }
 
     public static void calcularVentasProducto() throws IOException {
@@ -20,6 +43,7 @@ public class CRUDArchivos {
     }
 
     public static void VerClientesCompras() throws IOException {
+
         List<Cliente> clientes = leerClientes();
         List<Integer> idsCompras = clientesConCompras();
         List<Cliente> clientesFinal = filtrarClientesCompras(clientes, idsCompras);
@@ -39,6 +63,7 @@ public class CRUDArchivos {
         sc.close();
         return lista;
 
+
     }
 
     public static List<Pedido> leerPedidos() throws IOException {
@@ -49,9 +74,9 @@ public class CRUDArchivos {
         String[] datos = sc.nextLine().split(",");
         lista.add(new Pedido(Integer.parseInt());
     }
-    sc.close();
-    return lista;
 
+    public static List<Pedido> leerPedidos() throws IOException {
+    List<Pedido> lista = new ArrayList<>();
     }
 
     public static List<Cliente> leerClientes() throws IOException {
