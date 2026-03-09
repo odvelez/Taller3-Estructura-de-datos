@@ -31,6 +31,10 @@ public class Producto{
         return precio;
     }
 
+    public int getStock(){
+        return stock;
+    }
+    
     @Override
     public String toString() {
         return id + "," + nombre + "," + categoria + "," + precio + "," + stock;
