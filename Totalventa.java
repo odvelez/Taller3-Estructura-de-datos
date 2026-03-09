@@ -1,10 +1,10 @@
-public class TotalVentas {
+public class Totalventa{
 
     private int producto_id;
     private String nombre_producto;
     private int total;
 
-    public TotalVentas(int producto_id, String nombre_producto, int total) {
+    public Totalventa(int producto_id, String nombre_producto, int total) {
         this.producto_id = producto_id;
         this.nombre_producto = nombre_producto;
         this.total = total;
@@ -22,6 +22,7 @@ public class TotalVentas {
         return total;
     }
 
+    @Override
     public String toString() {
         return producto_id + "," + nombre_producto + "," + total;
     }

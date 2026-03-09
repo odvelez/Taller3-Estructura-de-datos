@@ -33,6 +33,7 @@ public class Pedido{
         return fecha;
     }
 
+    @Override
     public String toString() {
         return id + "," + cliente_id + "," + producto_id + "," + cantidad + "," + fecha;
     }

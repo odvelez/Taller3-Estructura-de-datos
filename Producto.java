@@ -1,3 +1,5 @@
+
+
 public class Producto{
     private int id;
     private String nombre;
@@ -5,7 +7,7 @@ public class Producto{
     private double precio;
     private int stock;
 
-    public Pedido(int id, int cliente_id, int producto_id, int cantidad, String fecha) {
+    public Producto(int id, String nombre, String categoria, double precio, int stock) {
         this.id = id;
         this.nombre = nombre;
         this.categoria = categoria;
@@ -17,22 +19,19 @@ public class Producto{
         return id;
     }
 
-    public int getNombre(){
+    public String getNombre(){
         return nombre;
     }
 
-    public int getCategoria(){
+    public String getCategoria(){
         return categoria;
     }
 
-    public int getPrecio(){
+    public double getPrecio(){
         return precio;
     }
 
-    public String getStock(){
-        return stock;
-    }
-
+    @Override
     public String toString() {
         return id + "," + nombre + "," + categoria + "," + precio + "," + stock;
     }
