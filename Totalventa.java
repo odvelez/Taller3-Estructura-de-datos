@@ -2,9 +2,9 @@ public class Totalventa{
 
     private int producto_id;
     private String nombre_producto;
-    private int total;
+    private double total;
 
-    public Totalventa(int producto_id, String nombre_producto, int total) {
+    public Totalventa(int producto_id, String nombre_producto, double total) {
         this.producto_id = producto_id;
         this.nombre_producto = nombre_producto;
         this.total = total;
@@ -18,7 +18,7 @@ public class Totalventa{
         return nombre_producto;
     }
 
-    public int getTotal() {
+    public double getTotal() {
         return total;
     }
 
