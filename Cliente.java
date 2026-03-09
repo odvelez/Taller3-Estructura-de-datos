@@ -20,6 +20,7 @@ public class Cliente{
      return email; 
    }
 
+    @Override
     public String toString() {
         return id + "," + nombre + "," + email;
     }
