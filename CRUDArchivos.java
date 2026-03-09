@@ -36,7 +36,7 @@ public class CRUDArchivos{
 
     while (sc.hasNextLine()) {
         String[] datos = sc.nextLine().split(",");
-        lista.add(new Pedido(Integer.parseInt(datos[0]), datos[1], datos[2], Double.parseDouble(datos[3]), Integer.parseInt(datos[4])));
+        lista.add(new Pedido(Integer.parseInt());
     }
     sc.close();
     return lista;
