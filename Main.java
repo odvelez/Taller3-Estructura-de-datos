@@ -12,7 +12,7 @@ public class Main {
             System.out.println("\n------ SISTEMA E-COMMERCE ------");
             System.out.println("1. Ver productos ordenados por precio");
             System.out.println("2. Agregar nuevo cliente");
-            System.out.println("3. Total de ventas producido por el producto");
+            System.out.println("3. Total de ventas producido por cada producto");
             System.out.println("4. Ver clientes que han realizado compras");
             System.out.println("5. Salir");
             System.out.print("Elija una opcion: ");
@@ -27,13 +27,14 @@ public class Main {
             try {
 
                 if (opcion == 1) {
-
+                    CRUDArchivos.OrdenarPrecio();
                 }
 
                 else if (opcion == 2) {
 
                     System.out.println("Ingrese el Id: ");
                     int id = sc.nextInt();
+                    sc.nextLine();
                     System.out.println("Ingrese el nombre: ");
                     String nombre = sc.nextLine();
                     System.out.println("Ingrese el email: ");
@@ -46,7 +47,7 @@ public class Main {
                 }
 
                 else if (opcion == 3) {
-
+                    CRUDArchivos.calcularVentasProducto();
                 }
 
                 else if (opcion == 4) {
